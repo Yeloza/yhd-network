@@ -3098,5 +3098,326 @@ body.web-build{background:var(--v91-bg)!important}
   try{render()}catch(e){console.warn('YHD V9.1 brand render skipped',e)}
 })();
 </script>
+
+<style id="yhd-v92-portal-system">
+/* V9.2 — portal-wide compact frame */
+:root{
+  --v92-orange:#DB4300;
+  --v92-bg:#f5f6f7;
+  --v92-white:#fff;
+  --v92-line:#e5e7e9;
+  --v92-ink:#202124;
+  --v92-muted:#7a7e84;
+  --v92-frame:1280px;
+  --v92-font:-apple-system,BlinkMacSystemFont,"Noto Sans KR","NanumSquare Neo","NanumSquareNeo","Apple SD Gothic Neo","Malgun Gothic","Segoe UI",sans-serif;
+}
+html,body,button,input,select,textarea{font-family:var(--v92-font)!important}
+body{background:var(--v92-bg)!important}
+
+/* MAIN — leave only branded YHD mark next to search */
+.v9-search-zone{
+  max-width:930px!important;
+  grid-template-columns:150px minmax(0,1fr)!important;
+  column-gap:18px!important;
+  grid-template-rows:auto auto!important;
+  padding-top:8px!important;
+}
+.v91-brand{display:none!important}
+.v92-brand-only{
+  grid-column:1!important;
+  grid-row:1 / span 2!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  padding-right:4px!important;
+}
+.v92-brand-only .v92-script{
+  display:block;
+  font-family:var(--yhd-display)!important;
+  color:#333!important;
+  font-size:14px!important;
+  line-height:1!important;
+  letter-spacing:-.03em!important;
+  transform:rotate(-2deg);
+  margin:0 6px 2px 0;
+  white-space:nowrap;
+}
+.v92-brand-only .v92-yhd{
+  display:block;
+  font-family:Arial Black,Arial,Helvetica,sans-serif!important;
+  font-weight:950!important;
+  font-size:46px!important;
+  line-height:.8!important;
+  letter-spacing:-.095em!important;
+  color:var(--v92-orange)!important;
+  transform:skew(-6deg);
+}
+.v9-search{grid-column:2!important;grid-row:1!important}
+.v9-search-hint{grid-column:2!important;grid-row:2!important}
+.v9-tagline{display:none!important}
+.v9-service em{display:none!important}
+.v9-seed-card{display:none!important}
+.v9-side{align-content:start!important}
+
+/* Delete explanatory copy; titles/actions remain */
+.v9-card-head p,
+.v8-page-head p,
+.v8-section-head p,
+.v86-archive-guide,
+.yhd-value-note,
+.v82-newsletter-shortcut,
+.v8-sidebar-note,
+.v8-hero>div>p,
+.v81-greeting .copy>p,
+.v81-greeting .mini,
+.v86-hero-sub{display:none!important}
+.v9-card-head{align-items:center!important}
+.v9-card-head h2{font-size:15px!important}
+.v9-card-head button{font-size:10px!important}
+
+/* Portal chrome for archive/community/letter/my */
+.v92-app{min-height:100vh;background:var(--v92-bg);padding:0 20px 90px}
+.v92-global{
+  max-width:var(--v92-frame);
+  height:66px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:86px minmax(340px,560px) 1fr;
+  gap:18px;
+  align-items:center;
+}
+.v92-global-logo{
+  border:0;background:transparent;cursor:pointer;padding:0;text-align:left;
+  font-family:Arial Black,Arial,Helvetica,sans-serif!important;
+  color:var(--v92-orange);
+  font-size:30px;font-weight:950;letter-spacing:-.09em;transform:skew(-6deg);
+}
+.v92-global-search{
+  display:flex;align-items:center;height:44px;
+  border:1.5px solid var(--v92-orange);background:#fff;border-radius:23px;
+  padding:0 6px 0 14px;
+}
+.v92-global-search span{font-size:16px;color:var(--v92-orange);margin-right:6px}
+.v92-global-search input{
+  flex:1;min-width:0;border:0!important;outline:0!important;background:transparent!important;
+  padding:0!important;font-size:13px!important;box-shadow:none!important;color:#222;
+}
+.v92-global-search button{
+  width:34px;height:34px;border:0;border-radius:50%;background:var(--v92-orange);color:#fff;
+  cursor:pointer;font-weight:900;
+}
+.v92-global-util{display:flex;justify-content:flex-end;gap:4px}
+.v92-global-util button{border:0;background:transparent;padding:7px 8px;font-size:10px;color:#666;cursor:pointer;border-radius:6px}
+.v92-global-util button:hover{background:#eceeef}
+.v92-tabs-wrap{border-top:1px solid #eceeef;border-bottom:1px solid #dfe1e3;background:#fff}
+.v92-tabs{
+  max-width:var(--v92-frame);margin:0 auto;height:44px;display:flex;align-items:center;gap:4px;
+  overflow:auto;scrollbar-width:none;
+}
+.v92-tabs::-webkit-scrollbar{display:none}
+.v92-tabs button{
+  height:44px;border:0;background:transparent;padding:0 14px;font-size:12px;font-weight:750;
+  color:#555b61;cursor:pointer;white-space:nowrap;position:relative;
+}
+.v92-tabs button:hover{color:#222}
+.v92-tabs button.active{color:var(--v92-orange)}
+.v92-tabs button.active:after{content:"";position:absolute;left:12px;right:12px;bottom:-1px;height:2px;background:var(--v92-orange)}
+.v92-content{max-width:var(--v92-frame);margin:16px auto 0}
+
+/* Internal content frame */
+.v92-content .v8-page{
+  min-height:auto!important;
+  border:1px solid var(--v92-line)!important;
+  border-radius:10px!important;
+  box-shadow:none!important;
+  padding:22px 24px 34px!important;
+  background:#fff!important;
+}
+.v92-content .v8-page-head{
+  align-items:center!important;margin-bottom:16px!important;
+  padding-bottom:14px!important;border-bottom:1px solid #eceeef!important;
+}
+.v92-content .v8-page-head small{display:none!important}
+.v92-content .v8-page-head h1{
+  font-family:var(--v92-font)!important;
+  font-size:22px!important;font-weight:800!important;letter-spacing:-.04em!important;
+  transform:none!important;line-height:1.25!important;
+}
+.v92-content .v8-section{margin-top:22px!important}
+.v92-content .v8-section-head{margin-bottom:10px!important;align-items:center!important}
+.v92-content .v8-section-head h2{font-size:14px!important;font-weight:800!important;letter-spacing:-.03em!important}
+.v92-content .v8-section-head button{font-size:9px!important}
+.v92-content .v8-card,
+.v92-content .v8-feed-card,
+.v92-content .v86-story-card,
+.v92-content .v86-profile-block{
+  border-radius:8px!important;
+  border-color:#e8e9eb!important;
+  box-shadow:none!important;
+}
+.v92-content .v8-grid{gap:10px!important}
+.v92-content .v8-feed{gap:8px!important}
+.v92-content .v8-btn{
+  border-radius:6px!important;
+  padding:7px 10px!important;
+  font-size:10px!important;
+}
+.v92-content .v8-filter-row{
+  gap:7px!important;padding:12px!important;border-radius:8px!important;background:#f8f9fa!important;
+}
+.v92-content .v8-filter-row select,
+.v92-content .v8-filter-row input{
+  height:36px!important;border-radius:6px!important;font-size:10px!important;
+}
+.v92-content .v8-search{height:42px!important;border-radius:7px!important}
+.v92-content .v8-search input{font-size:12px!important}
+.v92-content .v8-search button{border-radius:6px!important}
+.v92-content table{font-size:10px!important}
+.v92-content .v8-admin-table th,
+.v92-content .v8-admin-table td{padding:10px!important}
+
+/* Community/archive compact content */
+.v92-content .v8-person-top{gap:9px!important}
+.v92-content .v8-person-meta b{font-size:12px!important}
+.v92-content .v8-person-meta span{font-size:9px!important}
+.v92-content .v8-person-job{font-size:10px!important}
+.v92-content .v8-feed-card h3{font-size:12px!important}
+.v92-content .v8-feed-card p{font-size:9px!important;line-height:1.5!important}
+.v92-content .v8-feed-card small{font-size:8px!important}
+.v92-content .v86-story-card h3{font-size:12px!important}
+.v92-content .v86-story-card p{font-size:9px!important}
+
+/* Auth also follows flatter portal frame */
+.auth-card{border-radius:10px!important;box-shadow:none!important}
+.auth-art{border-radius:0!important}
+.auth-card h2{font-family:var(--v92-font)!important;font-size:23px!important;font-weight:800!important}
+.auth-card>p{font-size:11px!important}
+.input,.field input,.field select,.field textarea{border-radius:6px!important}
+.segmented{border-radius:7px!important}
+.segmented button{border-radius:5px!important}
+
+/* old sidebar/chrome are not used by V9.2 */
+.v92-app + .v8-bottom{z-index:90}
+
+@media(max-width:900px){
+  .v9-search-zone{
+    grid-template-columns:1fr!important;
+    grid-template-rows:auto auto auto!important;
+    max-width:720px!important;
+  }
+  .v92-brand-only{
+    grid-column:1!important;grid-row:1!important;justify-content:center!important;
+    margin-bottom:2px!important;
+  }
+  .v9-search{grid-column:1!important;grid-row:2!important}
+  .v9-search-hint{grid-column:1!important;grid-row:3!important;justify-content:center!important}
+  .v92-global{grid-template-columns:64px 1fr auto;gap:10px}
+  .v92-global-logo{font-size:25px}
+  .v92-global-util button:not(:last-child){display:none}
+  .v92-tabs button{padding:0 11px;font-size:11px}
+}
+@media(max-width:620px){
+  .v92-app{padding:0 10px 88px}
+  .v92-global{height:58px;grid-template-columns:52px minmax(0,1fr) 34px;gap:7px}
+  .v92-global-logo{font-size:23px}
+  .v92-global-search{height:40px;border-radius:20px;padding-left:10px}
+  .v92-global-search input{font-size:12px!important}
+  .v92-global-search button{width:30px;height:30px}
+  .v92-global-util button{padding:5px}
+  .v92-tabs-wrap{margin:0 -10px}
+  .v92-tabs{padding:0 5px;height:40px}
+  .v92-tabs button{height:40px;padding:0 10px;font-size:10px}
+  .v92-content{margin-top:10px}
+  .v92-content .v8-page{border-radius:8px!important;padding:17px 14px 30px!important}
+  .v92-content .v8-page-head h1{font-size:19px!important}
+  .v92-brand-only .v92-script{font-size:12px!important}
+  .v92-brand-only .v92-yhd{font-size:39px!important}
+}
+</style>
+
+<script id="yhd-v92-portal-system-js">
+(function(){
+  if(window.__YHD_V92_PORTAL_SYSTEM__)return;
+  window.__YHD_V92_PORTAL_SYSTEM__=true;
+
+  const _v92HomeBase=homePage;
+  homePage=function(){
+    let page=_v92HomeBase();
+    const oldBrand='<div class="v91-brand"><div class="v91-logo"><span class="v91-logo-script">예술이 예수를 만나다</span><span class="v91-logo-yhd">YHD</span></div><div class="v91-brand-meta"><b>예학당 동문회</b><span>검색 포털 서비스 <em>SEED BETA</em></span></div></div>';
+    const newBrand='<div class="v92-brand-only"><span class="v92-script">예술이 예수를 만나다</span><span class="v92-yhd">YHD</span></div>';
+    page=page.split(oldBrand).join(newBrand);
+    return page;
+  };
+
+  function v92NavButton(view,label,aliases=[]){
+    const active=[view,...aliases].includes(state.view);
+    return '<button class="'+(active?'active':'')+'" data-nav="'+view+'">'+label+'</button>';
+  }
+  function v92Header(){
+    const me=current();
+    return '<header class="v92-global">'+
+      '<button class="v92-global-logo" data-nav="home">YHD</button>'+
+      '<div class="v92-global-search"><span>⌕</span><input id="v92-global-search" value="'+esc(state.archiveSearch||'')+'" placeholder="동문, 재능, 지역, 필요 검색"/><button data-v92-search>→</button></div>'+
+      '<div class="v92-global-util"><button data-action="notifications">알림</button><button data-nav="myV8">'+esc(me.full_name||'마이')+'</button></div>'+
+    '</header>';
+  }
+  function v92Tabs(){
+    return '<div class="v92-tabs-wrap"><nav class="v92-tabs">'+
+      v92NavButton('home','홈')+
+      v92NavButton('archiveV8','동문 아카이브',['archive'])+
+      v92NavButton('communityV8','커뮤니티',['messages','chat','groupChat'])+
+      v92NavButton('newsletterV8','YHD LETTER')+
+      v92NavButton('myV8','마이페이지')+
+      (isAdmin()?v92NavButton('adminV8','운영자 관리'):'')+
+    '</nav></div>';
+  }
+
+  const _v92RenderBase=renderMain;
+  renderMain=function(){
+    document.body.classList.toggle('yhd-v9-home',state.view==='home');
+    if(state.view==='home'){
+      $('#app').innerHTML='<main class="v9-home-shell">'+homePage()+'</main>'+v8MobileBottom();
+      return;
+    }
+    const pages={
+      archiveV8:v8ArchivePage,
+      communityV8:v8CommunityPage,
+      newsletterV8:v8NewsletterPage,
+      myV8:v8MyPage,
+      adminV8:v8AdminPage,
+      messages:messagesPage,
+      chat:chatPage,
+      groupChat:groupChatPage
+    };
+    const fn=pages[state.view];
+    if(fn){
+      $('#app').innerHTML='<div class="v92-app">'+v92Header()+v92Tabs()+'<main class="v92-content">'+fn()+'</main></div>'+v8MobileBottom();
+      return;
+    }
+    return _v92RenderBase();
+  };
+
+  document.addEventListener('click',function(e){
+    const b=e.target.closest('[data-v92-search]');
+    if(!b)return;
+    const input=document.querySelector('#v92-global-search');
+    state.archiveSearch=(input?.value||'').trim();
+    state.view='archiveV8';
+    window.scrollTo(0,0);
+    renderMain();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Enter'&&e.target.id==='v92-global-search'){
+      e.preventDefault();
+      state.archiveSearch=e.target.value.trim();
+      state.view='archiveV8';
+      window.scrollTo(0,0);
+      renderMain();
+    }
+  });
+
+  try{render()}catch(e){console.warn('YHD V9.2 portal system render skipped',e)}
+})();
+</script>
 </body>
 </html>
