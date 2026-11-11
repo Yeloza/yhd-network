@@ -5,7 +5,7 @@
   "portsAttributes": {
     "3000": {
       "label": "YHD Preview",
-      "onAutoForward": "openPreview"
+      "onAutoForward": "openBrowser"
     }
   },
   "postCreateCommand": "npm install"
