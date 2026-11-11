@@ -1,0 +1,12 @@
+{
+  "name": "yhd-network",
+  "version": "8.8.0",
+  "private": true,
+  "description": "YHD 예학당 동문 네트워크 모바일/PWA 테스트 프로젝트",
+  "scripts": {
+    "start": "serve . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
