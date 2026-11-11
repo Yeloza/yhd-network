@@ -1,7 +1,7 @@
 {
-  "name": "YHD — 예학당 동문 네트워크",
+  "name": "YHD — 예학당 동문회 검색 포털",
   "short_name": "YHD",
-  "description": "예학당의 배움을 각자의 삶과 작업으로 이어가는 YHD 동문 네트워크",
+  "description": "예학당 동문을 사람·재능·필요·Story Doing으로 발견하고 연결하는 검색 포털 서비스",
   "id": "./?source=pwa",
   "start_url": "./?mobile=1&demo=1",
   "scope": "./",
