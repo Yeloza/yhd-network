@@ -1,0 +1,27 @@
+{
+  "name": "YHD — 예학당 동문 네트워크",
+  "short_name": "YHD",
+  "description": "예학당의 배움을 각자의 삶과 작업으로 이어가는 YHD 동문 네트워크",
+  "id": "./?source=pwa",
+  "start_url": "./?mobile=1&demo=1",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F7F6F3",
+  "theme_color": "#DB4300",
+  "lang": "ko-KR",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
